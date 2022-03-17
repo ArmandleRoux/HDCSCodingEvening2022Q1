@@ -6,7 +6,6 @@ def to_morse(sentence):
         for line in morse_file:
             data = line.split(", ")
             morse_dict[data[0]] = data[1].replace("\n", "")
-    
     morse_sentence = ""
     for char in sentence:
         if char == " ":
@@ -23,7 +22,7 @@ def morse_to_normal(sentence):
     with open("morse.txt", "r") as morse_file:
         for line in morse_file:
             data = line.split(", ")
-            morse_dict[data[1]] = data[0].replace("\n", "")
+            morse_dict[data[1].replace("\n", "")] = data[0]
     normal_sentence = ""
     morse_sentence = sentence.split(" ")
     for char in morse_sentence:
