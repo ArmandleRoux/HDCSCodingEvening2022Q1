@@ -1,5 +1,6 @@
 """Function that does a basic character check through a dictionary 
-and replaces the corresponding characters from letters to morse code"""
+and replaces the corresponding characters from letters to morse code.
+The dictionary is created from a text file containing the convertions"""
 def to_morse(sentence):
     morse_dict = {}  
     with open("morse.txt", "r") as morse_file:
@@ -16,7 +17,8 @@ def to_morse(sentence):
 
 
 """Function that does a basic character check through a dictionary 
-and replaces the corresponding characters from morse code to letters"""
+and replaces the corresponding characters from morse code to letters.
+The dictionary is created from a text file containing the convertions"""
 def morse_to_normal(sentence):
     morse_dict = {}  
     with open("morse.txt", "r") as morse_file:
@@ -37,6 +39,8 @@ def morse_to_normal(sentence):
 can choose to encrypt a sentence to morse code or decrypt from 
 morse code to normal letters"""  
 while True:
+    print("-"*80)
+    print("*"*30 + "MORSE CODE DECODER" + "*"*30)
     print("-"*80)
     print("Please select an option by entering the menu number:\n"
              "1. Encrypt to Morse Code\n"
